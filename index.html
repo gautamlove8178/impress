@@ -1,122 +1,54 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" >
 <head>
   <meta charset="UTF-8">
-  <title>Drag Papers ❤️</title>
-  <link rel='stylesheet' href='https://fonts.googleapis.com/css2?family=Short+Stack&family=Homemade+Apple&display=swap'>
-  <link rel="stylesheet" href="./style.css">
+  <title>CodePen - Drag Papers ❤️</title>
+  <link rel='stylesheet' href='https://fonts.googleapis.com/css2?family=Short+Stack&amp;family=Homemade+Apple&amp;display=swap'><link rel="stylesheet" href="./style.css">
 
-  <style>
-    /* Fullscreen first screen */
-    #startScreen {
-      position: fixed;
-      top: 0; left: 0;
-      width: 100%; height: 100%;
-      background: #000;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      flex-direction: column;
-      z-index: 9999;
-    }
-    #startScreen h2 {
-      color: white;
-      font-family: 'Homemade Apple', cursive;
-      margin-bottom: 20px;
-    }
-
-    /* ❤️ Heartbeat Button */
-    #playBtn {
-      padding: 15px 35px;
-      font-size: 20px;
-      border: none;
-      background: red;
-      color: white;
-      border-radius: 30px;
-      cursor: pointer;
-      animation: heartbeat 1.2s infinite;
-      box-shadow: 0 0 20px rgba(255,0,0,0.8);
-    }
-    @keyframes heartbeat {
-      0%   { transform: scale(1); }
-      25%  { transform: scale(1.12); }
-      50%  { transform: scale(1); }
-      75%  { transform: scale(1.12); }
-      100% { transform: scale(1); }
-    }
-
-    /* Hide papers initially without breaking alignment */
-    .content {
-      visibility: hidden;
-      opacity: 0;
-      pointer-events: none;
-      transition: 0.8s ease-in-out;
-    }
-  </style>
 </head>
-
 <body>
+<!-- partial:index.partial.html -->
+<!-- A pen by Developer Rahul  -->
+<div class="paper heart">
 
-<!-- ✅ FIRST SCREEN -->
-<div id="startScreen">
-  <h2>Tap to Begin ❤️</h2>
-  <button id="playBtn">🎵 Play Music</button>
 </div>
 
-<!-- ✅ MUSIC -->
-<audio id="bgMusic" src="music.mp3" loop></audio>
-
-<!-- ✅ MAIN CONTENT (Papers – alignment safe) -->
-<div class="content">
-  <div class="paper heart"></div>
-
-  <div class="paper image">
-    <p> and I fallen in</p>
+  
+<div class="paper image">
+  <p> and I fallen in</p>
     <p>Love with You 😍 </p>
-    <img src="images/1.jpeg" />
-  </div>
-
-  <div class="paper image">
-    <img src="images/2.jpeg" />
-  </div>
-
-  <div class="paper image">
-    <p>How can be </p>
-    <p> someone so cute ❤️ </p>
-    <img src="images/3.jpg" />
-  </div>
-
-  <div class="paper red">
-    <p class="p1"> and My Favorite</p>
-    <p class="p2">Person 😍</p>
-  </div>
-
-  <div class="paper">
-    <p class="p1">You are so Cute my pataka </p>
-    <p class="p1">so Amazing <span style="color: red !important;">❤️</span></p>
-  </div>
-
-  <div class="paper">
-    <p class="p1">Drag the papers to move!</p>
-  </div>
+   <img src="images/1.jpeg" />
 </div>
 
-<script src="./script.js"></script>
+<div class="paper image">
+  <p</p>
+  <img src="images/2.jpeg" />
+</div>
 
-<script>
-  document.getElementById("playBtn").addEventListener("click", () => {
-    document.getElementById("bgMusic").play();
+<div class="paper image">
+  <p>How can be </p>
+   <p> someone so cute ❤️ </p>
 
-    // hide play screen
-    document.getElementById("startScreen").style.display = "none";
+  <img src="images/3.jpg" />
+</div>
 
-    // show papers without alignment shift
-    const content = document.querySelector(".content");
-    content.style.visibility = "visible";
-    content.style.opacity = "1";
-    content.style.pointerEvents = "auto";
-  });
-</script>
+
+
+<div class="paper red">
+<p class="p1"> and My Favorite</p>
+<p class="p2">Person 😍</p>
+</div>
+
+<div class="paper">
+<p class="p1">You are Cute </p>
+  <p class="p1">Amazing <span style="color: red !important;">❤️</span></p>
+</div>
+
+<div class="paper">
+<p class="p1">Drag the papers to move!</p>
+</div>
+<!-- partial -->
+  <script  src="./script.js"></script>
 
 </body>
 </html>
